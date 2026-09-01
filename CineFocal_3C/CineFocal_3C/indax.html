@@ -1,0 +1,484 @@
+<!--
+================================================================================
+* PROJECT / المشروع: Cyberpunk Cinematic Photography Portfolio Template
+* FILE / اسم الملف: index.html
+* ------------------------------------------------------------------------------
+* QUICK EDIT GUIDE / دليل التعديلات السريعة:
+* 1. Head & Meta Tags / وسوم الترويسة والخطوط        : Lines [25 to 45]
+* 2. Top Controls (Theme & Lang) / أزرار التحكم العلوية : Lines [48 to 55]
+* 3. Hero Brand Title / عنوان الترويسة الرئيسي        : Lines [58 to 82]
+* 4. Hero Section & Line-Art / قسم الهيرو والرسومات    : Lines [85 to 145]
+* 5. Sticky Navigation Bar / شريط التنقل السيبراني الثابت : Lines [148 to 175]
+* 6. Portfolio 3D Gallery / معرض الأعمال ثلاثي الأبعاد  : Lines [180 to 245]
+* 7. Vision Section / قسم الرؤية وفلسفة العدسة         : Lines [250 to 285]
+* 8. Services Grid / شبكة باقات الخدمات والأسعار       : Lines [290 to 330]
+* 9. Contact Channels / قنوات التواصل بالأشكال الدائرية  : Lines [335 to 405]
+* 10. Service Booking Modal / نافذة حجز الخدمة المنبثقة : Lines [410 to 450]
+================================================================================
+-->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="dynamic-page-title">Photographer Portfolio | مصور سينمائي</title>
+    
+    <!-- FontAwesome Icons Library / مكتبة الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Digital & Modern Fonts / الخطوط الرقمية والحديثة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Orbitron:wght@600;900&family=Segoe+UI:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Core Stylesheet / ملف التنسيقات الموحد -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Fixed Center Top Bar (Theme & Language) / أزرار التحكم الثابتة في المنتصف -->
+    <div class="fixed-top-bar">
+        <button id="theme-toggle" class="control-btn" title="Toggle Theme / تبديل الوضع">☀️</button>
+        <button id="lang-toggle" class="control-btn" title="Switch Language / تبديل اللغة">EN</button>
+    </div>
+
+    <!-- ========================================================================
+         1. HERO BRAND TITLE / الترويسة الرئيسية: الاسم التفاعلي الحركي
+         ======================================================================== -->
+    <header class="hero-top-brand">
+        <div class="wrap">
+            <h1 class="title" id="word" aria-live="polite">
+                <!-- Arabic Connected Name / الاسم العربي بحروف متصلة -->
+                <span class="lang-ar" id="brand-name-ar">
+                    <span class="word-group">المصور</span>
+                    <span class="word-group">اسم</span>
+                    <span class="word-group">المصور</span>
+                </span>
+                <!-- English Separated Characters / الاسم الإنجليزي بحروف متحركة منفصلة -->
+                <span class="lang-en" id="brand-name-en">
+                    <span class="ch">P</span><span class="ch">H</span><span class="ch">O</span><span class="ch">T</span><span class="ch">O</span><span class="ch">G</span><span class="ch">R</span><span class="ch">A</span><span class="ch">P</span><span class="ch">H</span><span class="ch">E</span><span class="ch">R</span>
+                </span>
+                <span class="spark"></span>
+            </h1>
+        </div>
+    </header>
+
+    <!-- ========================================================================
+         2. SPLIT HERO & HUD / الشاشة المنقسمة: الكاميرا + لوحة الـ HUD المتكيفة
+         ======================================================================== -->
+    <div class="split-hero-container">
+        
+        <!-- Background Line-Art Graphics / نظام رسومات الـ Line-Art في الخلفية -->
+        <div class="hero-lineart-bg" aria-hidden="true">
+            <!-- DSLR Camera Technical Sketch / رسم الكاميرا التقني -->
+            <svg class="lineart-svg hero-cam-sketch lineart-parallax" data-depth="0.04" viewBox="0 0 200 160">
+                <path class="sketch-line" d="M30 45 L55 45 L65 25 L115 25 L125 45 L170 45 Q180 45 180 55 L180 135 Q180 145 170 145 L30 145 Q20 145 20 135 L20 55 Q20 45 30 45 Z" />
+                <circle class="sketch-line" cx="100" cy="95" r="38" />
+                <circle class="sketch-line dashed" cx="100" cy="95" r="30" />
+                <circle class="sketch-line accent" cx="100" cy="95" r="18" />
+                <rect class="sketch-line" x="145" y="32" width="18" height="8" rx="2" />
+                <circle class="sketch-line" cx="38" cy="62" r="6" />
+                <line class="sketch-line dashed" x1="5" y1="95" x2="20" y2="95" />
+                <line class="sketch-line dashed" x1="180" y1="95" x2="195" y2="95" />
+            </svg>
+
+            <!-- Technical Telemetry Data / بيانات قياسات الكاميرا التقنية -->
+            <div class="hero-hud-telemetry lineart-parallax" data-depth="0.08">
+                <div class="hud-tele-item"><span class="bracket">[</span> ISO 400 <span class="bracket">]</span></div>
+                <div class="hud-tele-item">F / 1.8</div>
+                <div class="hud-tele-item">1/125s</div>
+                <div class="hud-tele-item accent-txt">50MM RAW</div>
+            </div>
+
+            <!-- Viewfinder Focus Reticle / شبكة إطار التركيز البؤري -->
+            <svg class="lineart-svg hero-focus-frame lineart-pulse" viewBox="0 0 100 100">
+                <path class="sketch-line accent" d="M10 30 L10 10 L30 10 M70 10 L90 10 L90 30 M90 70 L90 90 L70 90 M30 90 L10 90 L10 70" />
+                <circle class="sketch-line dashed" cx="50" cy="50" r="14" />
+                <circle class="sketch-dot" cx="50" cy="50" r="2" />
+            </svg>
+        </div>
+
+        <!-- Camera Intro Web Component Container / نصف الكاميرا ثلاثية الأبعاد -->
+        <div class="hero-camera-half">
+            <camera-intro id="main-lens"></camera-intro>
+        </div>
+
+        <!-- Dynamic HUD Data Dashboard / نصف لوحة البيانات الشخصية والمهارات -->
+        <div class="hero-hud-half">
+            <div class="hud-dashboard-card">
+                
+                <!-- Personal Info Column / عمود البيانات الشخصية -->
+                <div class="hud-column info-column" id="hud-info-container">
+                    <div class="hud-data-box">
+                        <span class="hud-data-label"><span class="lang-ar">المهنة</span><span class="lang-en">Profession</span></span>
+                        <span class="hud-data-val"><span class="lang-ar">مصور سينمائي وفوتوغرافي</span><span class="lang-en">Cinematographer</span></span>
+                    </div>
+                    <div class="hud-data-box">
+                        <span class="hud-data-label"><span class="lang-ar">العمر</span><span class="lang-en">Age</span></span>
+                        <span class="hud-data-val"><span class="lang-ar">24 سنة</span><span class="lang-en">24 Years</span></span>
+                    </div>
+                    <div class="hud-data-box">
+                        <span class="hud-data-label"><span class="lang-ar">الموقع</span><span class="lang-en">Location</span></span>
+                        <span class="hud-data-val"><span class="lang-ar">المدينة - الدولة</span><span class="lang-en">City - Country</span></span>
+                    </div>
+                </div>
+
+                <!-- Skewed Skills Column / عمود أشرطة المهارات المائلة -->
+                <div class="hud-column skills-column" id="hud-skills-container">
+                    <div class="skill-item">
+                        <div class="skill-header"><span class="lang-ar">فوتوشوب وتعديل الصور</span><span class="lang-en">Photoshop Retouch</span></div>
+                        <div class="range" style="--p:95"></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span class="lang-ar">لايت روم ومعالجة الألوان</span><span class="lang-en">Lightroom Grading</span></div>
+                        <div class="range" style="--p:90"></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span class="lang-ar">التصوير السينمائي والإضاءة</span><span class="lang-en">Cinematic Lighting</span></div>
+                        <div class="range" style="--p:85"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================================
+         3. STICKY CYBER NAVIGATION / أزرار التنقل الرئيسية مع التثبيت الذكي
+         ======================================================================== -->
+    <nav id="main-nav" class="nav-glass-container">
+        <div class="nav-buttons-grid">
+            <button class="nav-cyber-btn active" data-target="portfolio" type="button">
+                <span class="btn-label lang-ar">الأعمال</span>
+                <span class="btn-label lang-en">Portfolio</span>
+            </button>
+            <button class="nav-cyber-btn" data-target="vision" type="button">
+                <span class="btn-label lang-ar">الرؤية</span>
+                <span class="btn-label lang-en">Vision</span>
+            </button>
+            <button class="nav-cyber-btn" data-target="services" type="button">
+                <span class="btn-label lang-ar">الخدمات</span>
+                <span class="btn-label lang-en">Services</span>
+            </button>
+            <button class="nav-cyber-btn" data-target="contact" type="button">
+                <span class="btn-label lang-ar">التواصل</span>
+                <span class="btn-label lang-en">Contact</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========================================================================
+         4. MAIN CONTENT AREA / منطقة الأقسام المتبادلة
+         ======================================================================== -->
+    <main id="main-content" class="content-area">
+        
+        <!-- [SECTION 1: 3D INTERACTIVE GALLERY / معرض الأعمال ثلاثي الأبعاد] -->
+        <section id="portfolio" class="section-page active-section">
+            
+            <div class="section-lineart-layer" aria-hidden="true">
+                <svg class="lineart-svg sketch-photographer-stand lineart-float" viewBox="0 0 120 180">
+                    <circle class="sketch-line" cx="50" cy="24" r="12" />
+                    <path class="sketch-line" d="M42 22 Q50 14 58 22" />
+                    <path class="sketch-line" d="M40 38 L30 75 L38 120 L32 170 M60 38 L68 75 L62 120 L68 170" />
+                    <path class="sketch-line" d="M40 45 L72 40 L88 52 L65 60" />
+                    <rect class="sketch-line accent" x="80" y="44" width="26" height="18" rx="3" />
+                    <path class="sketch-line" d="M106 48 L120 46 L120 58 L106 56 Z" />
+                    <line class="sketch-line dashed" x1="120" y1="52" x2="160" y2="52" />
+                </svg>
+
+                <svg class="lineart-svg sketch-tripod-cam lineart-float-slow" viewBox="0 0 110 160">
+                    <rect class="sketch-line" x="35" y="20" width="30" height="20" rx="3" />
+                    <circle class="sketch-line" cx="50" cy="30" r="6" />
+                    <line class="sketch-line" x1="50" y1="40" x2="50" y2="55" />
+                    <circle class="sketch-line accent" cx="50" cy="55" r="4" />
+                    <line class="sketch-line" x1="50" y1="55" x2="15" y2="150" />
+                    <line class="sketch-line" x1="50" y1="55" x2="50" y2="150" />
+                    <line class="sketch-line" x1="50" y1="55" x2="85" y2="150" />
+                    <path class="sketch-line dashed" d="M25 110 L75 110" />
+                </svg>
+            </div>
+
+            <div class="viewport-canvas" id="viewport">
+                <div class="chaos-board" id="board">
+                    <div class="photo-card-3d sz-wide" data-x="-260" data-y="-140" data-rx="14" data-ry="-18" data-rz="-8" data-tz="30">
+                        <div class="card-frame">
+                            <div class="card-glare"></div>
+                            <img src="assets/images/gallery/work-1.jpg" alt="Portfolio Image 1" />
+                        </div>
+                    </div>
+                    <div class="photo-card-3d sz-tall" data-x="-40" data-y="-170" data-rx="-10" data-ry="15" data-rz="6" data-tz="50">
+                        <div class="card-frame">
+                            <div class="card-glare"></div>
+                            <img src="assets/images/gallery/work-2.jpg" alt="Portfolio Image 2" />
+                        </div>
+                    </div>
+                    <div class="photo-card-3d sz-lg" data-x="200" data-y="-120" data-rx="18" data-ry="-12" data-rz="-5" data-tz="70">
+                        <div class="card-frame">
+                            <div class="card-glare"></div>
+                            <img src="assets/images/gallery/work-3.jpg" alt="Portfolio Image 3" />
+                        </div>
+                    </div>
+                    <div class="photo-card-3d sz-sm" data-x="-290" data-y="70" data-rx="-15" data-ry="12" data-rz="10" data-tz="20">
+                        <div class="card-frame">
+                            <div class="card-glare"></div>
+                            <img src="assets/images/gallery/work-4.jpg" alt="Portfolio Image 4" />
+                        </div>
+                    </div>
+                    <div class="photo-card-3d sz-md" data-x="0" data-y="0" data-rx="0" data-ry="0" data-rz="0" data-tz="100" id="defaultCenterCard">
+                        <div class="card-frame">
+                            <div class="card-glare"></div>
+                            <img src="assets/images/gallery/work-5.jpg" alt="Portfolio Image 5" />
+                        </div>
+                    </div>
+                    <div class="photo-card-3d sz-wide" data-x="180" data-y="60" data-rx="-12" data-ry="16" data-rz="7" data-tz="40">
+                        <div class="card-frame">
+                            <div class="card-glare"></div>
+                            <img src="assets/images/gallery/work-6.jpg" alt="Portfolio Image 6" />
+                        </div>
+                    </div>
+                    <div class="photo-card-3d sz-tall" data-x="-160" data-y="130" data-rx="15" data-ry="-14" data-rz="-9" data-tz="60">
+                        <div class="card-frame">
+                            <div class="card-glare"></div>
+                            <img src="assets/images/gallery/work-7.jpg" alt="Portfolio Image 7" />
+                        </div>
+                    </div>
+                    <div class="photo-card-3d sz-md" data-x="80" data-y="170" data-rx="-8" data-ry="10" data-rz="5" data-tz="35">
+                        <div class="card-frame">
+                            <div class="card-glare"></div>
+                            <img src="assets/images/gallery/work-8.jpg" alt="Portfolio Image 8" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox Modal / نافذة المعاينة المكبرة -->
+            <div id="lightbox" class="lightbox-modal">
+                <div class="lightbox-box">
+                    <button class="close-btn" id="closeLightboxBtn" title="Close / إغلاق">&times;</button>
+                    <img id="lightboxImg" src="" alt="Expanded View / صورة مكبرة" />
+                </div>
+            </div>
+        </section>
+
+        <!-- [SECTION 2: VISION & STORY / قسم الرؤية والقصة] -->
+        <section id="vision" class="section-page hidden-section">
+            
+            <div class="section-lineart-layer" aria-hidden="true">
+                <svg class="lineart-svg sketch-photographer-sit lineart-float" viewBox="0 0 140 140">
+                    <circle class="sketch-line" cx="45" cy="30" r="11" />
+                    <path class="sketch-line" d="M38 45 L30 75 L65 85 L35 125 M50 45 L58 70 L95 72 L115 110" />
+                    <rect class="sketch-line accent" x="72" y="48" width="22" height="15" rx="2" />
+                    <circle class="sketch-line" cx="83" cy="55" r="4" />
+                </svg>
+
+                <svg class="lineart-svg sketch-hud-aperture-ring lineart-rotate-slow" viewBox="0 0 180 180">
+                    <circle class="sketch-line dashed" cx="90" cy="90" r="75" />
+                    <circle class="sketch-line" cx="90" cy="90" r="55" />
+                    <path class="sketch-line" d="M90 35 L125 70 M145 90 L110 125 M90 145 L55 110 M35 90 L70 55" />
+                    <circle class="sketch-line accent" cx="90" cy="90" r="22" />
+                </svg>
+            </div>
+
+            <div class="vision-cards-grid">
+                <article class="card-29__card" data-card-29="root">
+                    <div class="card-29__inner">
+                        <span class="card-29__tag lang-ar" id="vision-tag-ar">// فلسفة العدسة</span>
+                        <span class="card-29__tag lang-en" id="vision-tag-en">// Lens Philosophy</span>
+                        
+                        <h2 class="card-29__title lang-ar" id="vision-title-ar">تجميد اللحظة</h2>
+                        <h2 class="card-29__title lang-en" id="vision-title-en">Freezing Time</h2>
+                        
+                        <p class="card-29__desc lang-ar" id="vision-desc-ar">الصورة ليست مجرد انعكاس ضوئي على مستشعر رقمي؛ إنها طاقة شعورية مجمدة تبقى حية عندما تتلاشى كل التفاصيل الأخرى في الذاكرة.</p>
+                        <p class="card-29__desc lang-en" id="vision-desc-en">A photograph is not merely light captured on a digital sensor; it is an emotional pulse frozen in time that outlasts memory.</p>
+                        
+                        <span class="card-29__btn lang-ar" id="vision-btn-ar">استكشف الرؤية ⚡</span>
+                        <span class="card-29__btn lang-en" id="vision-btn-en">Explore Vision ⚡</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- [SECTION 3: SERVICES & PRICING / قسم الخدمات والأسعار المتمدد] -->
+        <section id="services" class="section-page hidden-section">
+            
+            <div class="section-lineart-layer" aria-hidden="true">
+                <svg class="lineart-svg sketch-gear-lens lineart-rotate-slow" viewBox="0 0 100 100">
+                    <rect class="sketch-line" x="25" y="15" width="50" height="70" rx="6" />
+                    <line class="sketch-line dashed" x1="25" y1="35" x2="75" y2="35" />
+                    <line class="sketch-line" x1="25" y1="55" x2="75" y2="55" />
+                    <line class="sketch-line dashed" x1="25" y1="65" x2="75" y2="65" />
+                    <ellipse class="sketch-line accent" cx="50" cy="15" rx="25" ry="6" />
+                </svg>
+
+                <svg class="lineart-svg sketch-gear-softbox lineart-pulse" viewBox="0 0 110 160">
+                    <polygon class="sketch-line" points="20,15 80,10 95,65 35,70" />
+                    <line class="sketch-line dashed" x1="20" y1="15" x2="95" y2="65" />
+                    <line class="sketch-line dashed" x1="80" y1="10" x2="35" y2="70" />
+                    <line class="sketch-line" x1="55" y1="70" x2="55" y2="150" />
+                    <line class="sketch-line" x1="55" y1="110" x2="25" y2="150" />
+                    <line class="sketch-line" x1="55" y1="110" x2="85" y2="150" />
+                </svg>
+
+                <svg class="lineart-svg sketch-gear-drone lineart-float" viewBox="0 0 120 70">
+                    <rect class="sketch-line" x="45" y="25" width="30" height="20" rx="4" />
+                    <line class="sketch-line" x1="45" y1="25" x2="20" y2="15" />
+                    <line class="sketch-line" x1="75" y1="25" x2="100" y2="15" />
+                    <line class="sketch-line" x1="45" y1="45" x2="20" y2="55" />
+                    <line class="sketch-line" x1="75" y1="45" x2="100" y2="55" />
+                    <ellipse class="sketch-line dashed" cx="20" cy="15" rx="14" ry="3" />
+                    <ellipse class="sketch-line dashed" cx="100" cy="15" rx="14" ry="3" />
+                    <ellipse class="sketch-line dashed" cx="20" cy="55" rx="14" ry="3" />
+                    <ellipse class="sketch-line dashed" cx="100" cy="55" rx="14" ry="3" />
+                </svg>
+            </div>
+
+            <!-- Dynamic Services Wrapper / شبكة الخدمات القابلة للتمدد -->
+            <div class="services-wrapper" id="services-cards-container">
+                <div class="service-card-item card-bronze" data-service-ar="جلسة بورتريه" data-service-en="Portrait Session" data-price="$49">
+                    <div class="c-layer-1">
+                        <div class="c-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <h3 class="c-title lang-ar">جلسة بورتريه</h3>
+                        <h3 class="c-title lang-en">Portrait Session</h3>
+                    </div>
+                    <div class="c-layer-2">
+                        <span class="c-desc lang-ar">تصوير شخصي احترافي وتعديل 10 صور بدقة فائقة.</span>
+                        <span class="c-desc lang-en">10 High-End Retouched Photos with Studio Lighting.</span>
+                        <div class="c-footer-action">
+                            <div class="c-price-box">
+                                <span class="c-currency">$</span>
+                                <span class="c-number">49</span>
+                            </div>
+                            <button class="order-service-btn" type="button">
+                                <span class="lang-ar">طلب الخدمة</span>
+                                <span class="lang-en">Order Now</span>
+                                <i class="fa-solid fa-bolt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [SECTION 4: CONTACT CHANNELS / قسم التواصل المتناسق] -->
+        <section id="contact" class="section-page hidden-section">
+            
+            <div class="section-lineart-layer" aria-hidden="true">
+                <div class="sketch-rec-box lineart-pulse">
+                    <span class="rec-dot"></span>
+                    <span class="rec-txt">REC ● 4K 60FPS</span>
+                </div>
+                <svg class="lineart-svg sketch-contact-photographer lineart-float" viewBox="0 0 130 160">
+                    <circle class="sketch-line" cx="60" cy="25" r="12" />
+                    <path class="sketch-line" d="M50 40 L40 85 L35 150 M70 40 L80 85 L85 150" />
+                    <path class="sketch-line" d="M50 48 L20 60 L15 50" />
+                    <rect class="sketch-line accent" x="5" y="42" width="24" height="16" rx="3" />
+                    <line class="sketch-line dashed" x1="0" y1="50" x2="-40" y2="50" />
+                </svg>
+            </div>
+
+            <!-- Contact Channels Grid / شبكة بطاقات التواصل -->
+            <div class="contact-vertical-stack">
+                <a href="#" id="contact-link-wa" target="_blank" class="contact-card-row">
+                    <div class="hexagon-wrapper"><div class="hexagon"><i class="fa-brands fa-whatsapp"></i></div></div>
+                    <div class="contact-info-text">
+                        <span class="contact-title lang-ar">واتساب</span>
+                        <span class="contact-title lang-en">WhatsApp</span>
+                        <span class="contact-sub" id="contact-display-wa">+1 (234) 567-8900</span>
+                    </div>
+                </a>
+
+                <a href="#" id="contact-link-call" class="contact-card-row">
+                    <div class="hexagon-wrapper"><div class="hexagon"><i class="fa-solid fa-phone"></i></div></div>
+                    <div class="contact-info-text">
+                        <span class="contact-title lang-ar">اتصال مباشر</span>
+                        <span class="contact-title lang-en">Direct Call</span>
+                        <span class="contact-sub lang-ar">متاح للحجوزات الفورية</span>
+                        <span class="contact-sub lang-en">Available for Instant Booking</span>
+                    </div>
+                </a>
+
+                <a href="#" id="contact-link-ig" target="_blank" class="contact-card-row">
+                    <div class="hexagon-wrapper"><div class="hexagon"><i class="fa-brands fa-instagram"></i></div></div>
+                    <div class="contact-info-text">
+                        <span class="contact-title lang-ar">انستقرام</span>
+                        <span class="contact-title lang-en">Instagram</span>
+                        <span class="contact-sub">@your_username</span>
+                    </div>
+                </a>
+
+                <a href="#" id="contact-link-tt" target="_blank" class="contact-card-row">
+                    <div class="hexagon-wrapper"><div class="hexagon"><i class="fa-brands fa-tiktok"></i></div></div>
+                    <div class="contact-info-text">
+                        <span class="contact-title lang-ar">تيك توك</span>
+                        <span class="contact-title lang-en">TikTok</span>
+                        <span class="contact-sub lang-ar">كواليس وفيديوهات سينمائية</span>
+                        <span class="contact-sub lang-en">Behind the Scenes & Reels</span>
+                    </div>
+                </a>
+
+                <a href="#" id="contact-link-fb" target="_blank" class="contact-card-row">
+                    <div class="hexagon-wrapper"><div class="hexagon"><i class="fa-brands fa-facebook-f"></i></div></div>
+                    <div class="contact-info-text">
+                        <span class="contact-title lang-ar">فيسبوك</span>
+                        <span class="contact-title lang-en">Facebook</span>
+                        <span class="contact-sub lang-ar">الصفحة الرسمية</span>
+                        <span class="contact-sub lang-en">Official Page</span>
+                    </div>
+                </a>
+
+                <a href="#" id="contact-link-mail" class="contact-card-row">
+                    <div class="hexagon-wrapper"><div class="hexagon"><i class="fa-solid fa-envelope"></i></div></div>
+                    <div class="contact-info-text">
+                        <span class="contact-title lang-ar">البريد الإلكتروني</span>
+                        <span class="contact-title lang-en">Email Address</span>
+                        <span class="contact-sub" id="contact-display-mail">contact@yourdomain.com</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================================================
+         5. SERVICE BOOKING MODAL / نافذة طلب الخدمة المنبثقة
+         ======================================================================== -->
+    <div id="serviceModal" class="order-modal-backdrop">
+        <div class="order-modal-card">
+            <button class="close-modal-btn" id="closeServiceModal" title="Close / إغلاق">&times;</button>
+            <div class="modal-header-cyber">
+                <span class="modal-sub-tag">// DIRECT BOOKING / حجز مباشر</span>
+                <h3 id="modalServiceTitle">Service Title / اسم الخدمة</h3>
+                <p id="modalServicePrice" class="modal-price-badge">$0</p>
+            </div>
+            
+            <p class="modal-instruction lang-ar">اختر منصة التواصل المفضلة لإرسال تفاصيل الحجز فوراً:</p>
+            <p class="modal-instruction lang-en">Select your preferred platform to send the booking request directly:</p>
+
+            <div class="modal-channels-grid">
+                <a href="#" id="orderViaWhatsApp" target="_blank" class="channel-btn btn-wa">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>واتساب (WhatsApp)</span>
+                </a>
+                <a href="#" id="orderViaCall" class="channel-btn btn-call">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>اتصال (Direct Call)</span>
+                </a>
+                <a href="#" id="orderViaInstagram" target="_blank" class="channel-btn btn-ig">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>انستقرام (Instagram DM)</span>
+                </a>
+                <a href="#" id="orderViaEmail" class="channel-btn btn-mail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>إيميل (Email Request)</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts Execution / ترتيب ملفات الجافاسكربت -->
+    <script src="js/config.js"></script>
+    <script src="js/components/camera-intro.js"></script>
+    <script src="js/gallery-3d.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

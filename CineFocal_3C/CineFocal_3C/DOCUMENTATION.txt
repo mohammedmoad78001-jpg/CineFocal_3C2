@@ -1,0 +1,260 @@
+================================================================================
+   CINEFOCAL 3D PORTFOLIO TEMPLATE - COMPLETE USER MANUAL
+   دليل المستخدم والتوثيق الفني الشامل - قالب معرض المصور (CineFocal 3D)
+================================================================================
+* Version / الإصدار: 1.0.0 Commercial Edition
+* Author / المطور: Mohammed Moath (Senior Creative Developer)
+* Release Year / سنة الإصدار: 2026
+* Compatibility / التوافق: All Modern Browsers (Chrome, Firefox, Safari, Edge, Mobile)
+* Tech Stack / التقنيات: HTML5, CSS3, Modern JavaScript ES6+ (Zero Dependencies)
+================================================================================
+
+================================================================================
+  TABLE OF CONTENTS / فهرس المحتويات
+================================================================================
+  1. Quick Overview & Features / نظرة عامة ومميزات القالب
+  2. How to Run the Website Locally / طريقة تشغيل الموقع على جهازك
+  3. Complete File & Folder Structure / الهيكل التفصيلي للمجلدات والملفات
+  4. Image Specifications & Asset Management / دليل ومواصفات الصور بدقة
+  5. 2-Minute Customization (config.js) / التخصيص السريع عبر ملف الإعدادات
+  6. Advanced Design & Color Changes / التعديلات المتقدمة وتغيير الألوان
+  7. Deployment & Hosting Options / طرق رفع واستضافة الموقع مجاناً ومدفوعاً
+  8. Commercial License & Copyright Terms / شروط الترخيص وحقوق الاستخدام
+  9. Customer Support & 5-Star Rating / الدعم الفني وتقييم 5 نجوم
+================================================================================
+
+--------------------------------------------------------------------------------
+ 1. QUICK OVERVIEW & FEATURES / 1. نظرة عامة ومميزات القالب
+--------------------------------------------------------------------------------
+[EN]:
+- Data-Driven Architecture: Update your entire site from a single configuration file (`js/config.js`) without touching HTML.
+- 3D Aperture Intro Lens: Realistic mechanical camera lens that opens with smooth physics.
+- 3D Floating Gallery: Smooth inertia drag-and-drop 3D portfolio cards with auto-floating animation.
+- Animated Line-Art Sketch Background: Futuristic cyberpunk photography sketch background with subtle parallax response.
+- Integrated Booking System: Direct modal with one-click WhatsApp and Email pre-filled booking messages.
+- Full Bilingual Support: Instant switching between Arabic (RTL) and English (LTR).
+- Dark & Light Mode: Seamless cyberpunk dark theme and modern crisp light theme.
+
+[AR]:
+- بنية برمجية موجهة بالبيانات (Data-Driven): يمكنك تعديل كامل محتوى الموقع من ملف واحد (`js/config.js`) دون الحاجة لفتح أو كتابة كود HTML.
+- عدسة كاميرا 3D تفاعلية: محاكاة ميكانيكية واقعية لفتحة العدسة وانفتاح الشفرات عند فتح الموقع.
+- معرض أعمال ثلاثي الأبعاد: بطاقات 3D تفاعلية تدعم السحب الفيزيائي، الطفو التلقائي، والتكبير المباشر.
+- نظام رسومات سكتش متحرك: خلفية فنية مستوحاة من معدات التصوير والسينما تتحرك بنعومة مع مؤشر الفأرة (Parallax).
+- نظام حجز وطلب خدمات فوري: نافذة منبثقة تنشئ رسائل حجز تلقائية ومخصصة باسم الخدمة وسعرها للواتساب والبريد.
+- دعم كامل للغتين: تبديل فوري بين العربية (RTL) والإنجليزية (LTR) مع مراعاة اتصال الخط العربي.
+- وضع ليلي ونهاري: تبديل سلس بين الثيم السيبراني الداكن والثيم النهاري الأنيق.
+
+--------------------------------------------------------------------------------
+ 2. HOW TO RUN THE WEBSITE LOCALLY / 2. طريقة تشغيل الموقع على جهازك
+--------------------------------------------------------------------------------
+[EN]:
+1. Extract the downloaded `.zip` folder to your computer.
+2. Locate the `index.html` file inside the root folder.
+3. Double-click `index.html` to open it in any web browser (Chrome, Safari, Edge, Firefox).
+4. No Node.js, Apache, PHP, or local server installation is required.
+
+[AR]:
+1. فك الضغط عن المجلد الذي قمت بتحميله (`.zip`).
+2. ادخل إلى المجلد وافتح ملف `index.html`.
+3. انقر نقراً مزدوجاً على الملف ليفتح مباشرة في متصفحك المفضل (كروم، سفاري، إيدج، فايرفوكس).
+4. لا يتطلب تشغيل الموقع أي برامج خوادم إضافية مثل (Node.js أو XAMPP أو PHP).
+
+--------------------------------------------------------------------------------
+ 3. COMPLETE FILE & FOLDER STRUCTURE / 3. الهيكل التفصيلي للملفات
+--------------------------------------------------------------------------------
+CineFocal-3D/
+│
+├── DOCUMENTATION.txt         <-- [You are here] Comprehensive user manual & guide
+├── index.html                <-- Core HTML markup & viewport layout
+├── css/
+│   └── style.css             <-- Unified CSS styling, tokens, responsive rules & animations
+├── js/
+│   ├── config.js             <-- [PRIMARY CUSTOMIZATION FILE] All editable content is here
+│   ├── main.js               <-- Application logic, DOM injection, theme/lang switcher & events
+│   ├── gallery-3d.js         <-- 3D portfolio gallery engine & drag/inertia physics
+│   └── components/
+│       └── camera-intro.js   <-- Custom Web Component for the opening 3D aperture lens
+└── assets/
+    └── images/
+        ├── profile.jpg       <-- Photographer profile headshot (Inside 3D lens)
+        └── gallery/          <-- 3D Portfolio images directory (8 slots)
+            ├── work-1.jpg    <-- Landscape wide card (top-left)
+            ├── work-2.jpg    <-- Portrait tall card (top-center)
+            ├── work-3.jpg    <-- Large featured card (top-right)
+            ├── work-4.jpg    <-- Small portrait card (bottom-left)
+            ├── work-5.jpg    <-- Default center featured card (center)
+            ├── work-6.jpg    <-- Landscape wide card (mid-right)
+            ├── work-7.jpg    <-- Portrait tall card (bottom-left-mid)
+            └── work-8.jpg    <-- Balanced medium card (bottom-right)
+
+--------------------------------------------------------------------------------
+ 4. IMAGE SPECIFICATIONS & ASSET MANAGEMENT / 4. دليل ومواصفات الصور
+--------------------------------------------------------------------------------
+[EN]:
+To maintain fast load times and clean visuals, replace the placeholder images inside `assets/images/` using the following exact filenames and recommended dimensions:
+
++------------------------------------+-------------------------+---------------+-----------------+
+| Image Filename & Path              | Role & Position         | Ideal Size    | Aspect Ratio    |
++------------------------------------+-------------------------+---------------+-----------------+
+| assets/images/profile.jpg          | Profile / Inside Lens   | 600 x 600 px  | 1:1 (Square)    |
+| assets/images/gallery/work-1.jpg   | Gallery Wide Card       | 800 x 530 px  | 3:2 (Landscape) |
+| assets/images/gallery/work-2.jpg   | Gallery Tall Card       | 600 x 900 px  | 2:3 (Portrait)  |
+| assets/images/gallery/work-3.jpg   | Gallery Large Card      | 800 x 1040 px | 4:5 (Portrait)  |
+| assets/images/gallery/work-4.jpg   | Gallery Small Card      | 550 x 720 px  | 3:4 (Portrait)  |
+| assets/images/gallery/work-5.jpg   | Gallery Center Default  | 750 x 900 px  | 4:5 (Portrait)  |
+| assets/images/gallery/work-6.jpg   | Gallery Wide Card       | 800 x 530 px  | 3:2 (Landscape) |
+| assets/images/gallery/work-7.jpg   | Gallery Tall Card       | 600 x 900 px  | 2:3 (Portrait)  |
+| assets/images/gallery/work-8.jpg   | Gallery Medium Card     | 750 x 900 px  | 4:5 (Portrait)  |
++------------------------------------+-------------------------+---------------+-----------------+
+
+[AR]:
+للحفاظ على أعلى سرعة تحميل وتناسق بصري مريح للعين، استبدل الصور الافتراضية داخل مجلد `assets/images/` بنفس المسميات والمقاسات الموصى بها أدناه:
+
+1. صورة المصور الشخصية (`assets/images/profile.jpg`):
+   - الموضع: تظهر في قلب عدسة الكاميرا 3D عند افتتاح الموقع.
+   - المقاس المثالي: 600 × 600 بكسل (صورة مربعة 1:1 متمركزة على الوجه).
+   - الصيغة المفضلة: JPG أو PNG مضغوط (أقل من 300 كيلوبايت).
+
+2. صور معرض الأعمال (`assets/images/gallery/`):
+   - الصور العريضة (`work-1.jpg` و `work-6.jpg`): مقاس 800 × 530 بكسل (أفقية Landscape).
+   - الصور الطولية (`work-2.jpg` و `work-7.jpg`): مقاس 600 × 900 بكسل (طولية Portrait).
+   - الصورة المركزية الرئيسية (`work-5.jpg`): مقاس 750 × 900 بكسل (أول صورة تركز عليها الكاميرا).
+   - بقية الصور (`work-3.jpg`, `work-4.jpg`, `work-8.jpg`): مقاسات رأسية متناسقة.
+
+* نصيحة للأداء: قم بضغط صورك قبل وضعها باستخدام أدوات ضغط مجانية مثل TinyJPG أو Squoosh.
+
+--------------------------------------------------------------------------------
+ 5. 2-MINUTE CUSTOMIZATION (config.js) / 5. التخصيص السريع
+--------------------------------------------------------------------------------
+[EN]:
+Open `js/config.js` in your favorite code editor or Notepad. You will find clearly commented sections:
+
+1. Brand & Personal Name:
+   - `nameEn`: Modify letters in the array -> `["J", "O", "H", "N", " ", "D", "O", "E"]`
+   - `nameAr`: Modify words in the array -> `["المصور", "محمد", "علي"]`
+   - `metaTitle`: Update browser tab title text.
+
+2. HUD Personal Information:
+   - Edit, add, or delete items inside `personalInfo: [ ... ]`. The grid automatically adapts.
+
+3. Skills & Progress Bars:
+   - Edit, add, or delete skills inside `skills: [ ... ]`. Set `percentage: 95` (from 0 to 100).
+
+4. Services & Pricing Packages:
+   - Edit, add, or delete packages inside `services: [ ... ]`.
+   - Update `titleAr`, `titleEn`, `price`, and `currency`. The site auto-generates booking buttons.
+
+5. Contact & Social Channels:
+   - `phoneRaw`: Your WhatsApp/Call number with country code, NO symbols (e.g., "12025550199").
+   - `phoneDisplay`: Formatted number for display (e.g., "+1 (202) 555-0199").
+   - `email`: Your direct email address for receiving bookings.
+   - `socials`: URLs for your Instagram, TikTok, Facebook, and WhatsApp profiles.
+
+[AR]:
+افتح الملف `js/config.js` بمحرر النصوص وستجد كل قسم معنون ومفصل بوضوح:
+
+1. الاسم والهوية الشخصية (Brand):
+   - الاسم بالإنجليزي (`nameEn`): ضع أحرف اسمك مفصولة بين علامات تنصيص لضمان الحركة التفاعلية.
+   - الاسم بالعربي (`nameAr`): ضع كلمات اسمك كاملة لضمان اتصال الخط العربي الأصيل.
+   - عنوان التبويب (`metaTitle`): العنوان الذي يظهر أعلى نافذة المتصفح.
+
+2. بيانات لوحة الـ HUD الشخصية (personalInfo):
+   - يمكنك تعديل المهنة، العمر، الموقع، أو إضافة بنود جديدة مثل سنوات الخبرة ونوع الكاميرا المستخدمة.
+
+3. المهارات وأشرطة التقدم (skills):
+   - أضف مهاراتك وحدد النسبة المئوية من 0 إلى 100 عبر السطر `percentage: 90`.
+
+4. باقات الخدمات والأسعار (services):
+   - أضف أي عدد من باقات التصوير، وضع السعر والوصف، وستتمدد شبكة الخدمات وتتصل بنظام الحجز تلقائياً.
+
+5. قنوات التواصل والحجز (contact):
+   - رقم الهاتف المباشر (`phoneRaw`): اكتب رقمك مع الرمز الدولي وبدون مسافات لتشغيل الواتساب والاتصال.
+   - البريد الإلكتروني (`email`): بريدك المخصص لاستقبال تفاصيل الحجوزات.
+   - روابط منصات التواصل (`socials`): روابط حساباتك في انستقرام، تيك توك، وفيسبوك.
+
+--------------------------------------------------------------------------------
+ 6. ADVANCED DESIGN & COLOR CHANGES / 6. التعديلات المتقدمة
+--------------------------------------------------------------------------------
+[EN]:
+Changing Accent Colors via CSS:
+- Open `css/style.css`
+- Dark Mode Accent (Line 24): `--hud-accent: #F3E600;` (Change to your desired neon hex code).
+- Light Mode Accent (Line 38): `--hud-accent: #2563eb;` (Change to your desired color).
+
+[AR]:
+تغيير اللون الرئيسي للموقع عبر ملف التنسيقات (CSS):
+- افتح ملف `css/style.css`.
+- لون النيون في الوضع الليلي (السطر 24): غير القيمة `--hud-accent: #F3E600;` لأي كود لون تريده.
+- اللون في الوضع النهاري (السطر 38): غير القيمة `--hud-accent: #2563eb;` للون المفضل لديك.
+
+--------------------------------------------------------------------------------
+ 7. DEPLOYMENT & HOSTING OPTIONS / 7. طرق رفع واستضافة الموقع
+--------------------------------------------------------------------------------
+[EN]:
+Option A: Free Cloud Hosting (Fastest & Easiest)
+- Netlify: Go to `app.netlify.com/drop`, drag and drop the `CineFocal-3D` folder. Your site is live in 10 seconds!
+- Vercel: Connect your GitHub repository to Vercel for automatic deployment.
+- GitHub Pages: Push files to a repository and enable GitHub Pages under Settings > Pages.
+
+Option B: Traditional Shared Hosting (cPanel)
+1. Compress all project files into a `.zip` archive.
+2. Log into your cPanel and open File Manager.
+3. Upload the `.zip` into the `public_html` directory.
+4. Extract the `.zip` archive. Your website is now live on your domain.
+
+[AR]:
+الخيار الأول: استضافات سحابية مجانية فائقة السرعة (الأسهل والأسرع)
+- Netlify: افتح الرابط `app.netlify.com/drop` واسحب مجلد المشروع كاملاً وأفلته هناك. موقعك سيعمل خلال 10 ثوانٍ!
+- Vercel: ارفع مشروعك على منصة GitHub واربطه بـ Vercel ليتم نشره تلقائياً.
+- GitHub Pages: ارفع ملفاتك على مستودع GitHub وفعل خيار Pages من تبويب الإعدادات.
+
+الخيار الثاني: استضافات الـ cPanel التقليدية المدفوعة
+1. اضغط ملفات المشروع في ملف واحد بصيغة `.zip`.
+2. ادخل إلى لوحة التحكم cPanel ثم افتح إدارة الملفات (File Manager).
+3. ارفع الملف المضغوط داخل المجلد الرئيسي `public_html`.
+4. فك الضغط عن الملف، وسيعمل موقعك مباشرة على نطاقك الخاص (Domain).
+
+--------------------------------------------------------------------------------
+ 8. COMMERCIAL LICENSE & COPYRIGHT TERMS / 8. شروط الترخيص والحقوق
+--------------------------------------------------------------------------------
+[EN]:
+COMMERCIAL END-USER LICENSE AGREEMENT (EULA):
+- Permitted Uses:
+  * Creating a personal portfolio for yourself.
+  * Building and deploying client websites or commercial business sites.
+  * Modifying, customizing, and styling all source code.
+- Prohibited Uses:
+  * You may NOT resell, redistribute, sublicense, or share the source code as a template or asset.
+  * You may NOT upload this project to any public repository or marketplace as a downloadable product.
+
+Copyright © 2026 Mohammed Moath. All Rights Reserved.
+
+[AR]:
+اتفاقية الترخيص والاستخدام التجاري:
+- ما يُسمح لك به:
+  * استخدام القالب كمعرض أعمال شخصي لك.
+  * استخدام وتعديل القالب لبناء مواقع تجارية لعملائك ومشاريعك الخاصة.
+  * التعديل الكامل والتطوير على الأكواد المصدرية والتنسيقات.
+- ما يُمنع منعاً باتاً:
+  * لا يجوز لك إعادة بيع، توزيع، أو إتاحة الكود المصدري للقالب مجاناً أو بمقابل مادي.
+  * لا يجوز لك رفع القالب على المتاجر الرقمية أو المنصات المفتوحة كمنتج قابل للتحميل أو منافس.
+
+جميع الحقوق محفوظة © 2026 للمطور محمد معاذ.
+
+--------------------------------------------------------------------------------
+ 9. CUSTOMER SUPPORT & 5-STAR RATING / 9. الدعم الفني والتقييم
+--------------------------------------------------------------------------------
+[EN]:
+We are committed to providing top-notch digital products. If this template helped you launch your portfolio:
+Please support our work by leaving a ⭐⭐⭐⭐⭐ (5-Star Rating) on the marketplace download page!
+
+Need customization help or have questions?
+Author Support: mohammedmoad78001@gmail.com
+
+[AR]:
+نحن ملتزمون بتقديم أعلى المعايير الهندسية في منتجاتنا الرقمية. إذا ساعدك هذا القالب في بناء حضور رقمي مبهر:
+يرجى دعمنا بترك تقييم 5 نجوم ⭐⭐⭐⭐⭐ في صفحة المنتج على المتجر الرقمي!
+
+هل تواجه أي مشكلة أو تحتاج إلى مساعدة إضافية؟
+تواصل مباشرة مع الدعم الفني: mohammedmoad78001@gmail.com
+================================================================================
